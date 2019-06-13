@@ -129,29 +129,30 @@ The hello world example is an OpenCL application with a simple vector-addition a
 1. Confirm the presence of the precompiled FPGA binary.
 
     ```bash
-    ls -la ./xclbin/vector_addition.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.awsxclbin
+    ls -la ./xclbin/vector_addition.hw.xilinx_aws-vu9p-f1-04261818_dynamic_5_0.awsxclbin
     ```
 
 1. Execute the host application with the precompiled FPGA binary on the F1 instance.
 
     ```bash
     sudo sh
-    source /opt/Xilinx/SDx/2017.1.rte/setup.sh
+    source /opt/xilinx/xrt/setup.sh
     ./helloworld
     ```
 
     The host application executes using the vector_addition kernel running in the FPGA and produces the following results:
 
     ```shell
-    Device/Slot[0] (/dev/xdma0, 0:0:1d.0)
-    xclProbe found 1 FPGA slots with XDMA driver running
-    platform Name: Xilinx
-    Vendor Name : Xilinx
+    sh-4.2# ./helloworld
+    xclProbe found 1 FPGA slots with xocl driver running
     Found Platform
-    Found Device=xilinx:aws-vu9p-f1:4ddr-xpr-2pr:4.0
+    Platform Name: Xilinx
+    Found Device=xilinx_aws-vu9p-f1-04261818_dynamic_5_0
     XCLBIN File Name: vector_addition
-    INFO: Importing ./vector_addition.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.awsxclbin
-    Loading: './vector_addition.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.awsxclbin'
+    INFO: Importing xclbin/vector_addition.hw.xilinx_aws-vu9p-f1-04261818_dynamic_5_0.awsxclbin
+    Loading: 'xclbin/vector_addition.hw.xilinx_aws-vu9p-f1-04261818_dynamic_5_0.awsxclbin'
+    INFO: Could not load AFI for data retention, code: 18 - Loading in classic mode.
+    AFI load complete.
     Result =
     42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
     42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
