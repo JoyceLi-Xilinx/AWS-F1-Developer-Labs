@@ -4,7 +4,7 @@
   </tr>
   <tr>
     <td width="20%" align="center"><a href="README.md">Introduction</a></td>
-    <td width="20%" align="center"><b>1. Connecting to your F1 instance</b></td> 
+    <td width="20%" align="center"><b>1. Connecting to your F1 instance</b></td>
     <td width="20%" align="center"><a href="FFMPEG_Lab.md">2. Experiencing F1 acceleration</a></td>
     <td width="20%" align="center"><a href="IDCT_Lab.md">3. Developing F1 applications</a></td>
     <td width="20%" align="center"><a href="WRAP_UP.md">4. Wrapping-up</td>
@@ -27,7 +27,7 @@ If you have not received that email, please contact an Xilinx event staff member
 
 1. Open the above mentioned email containing your connection credentials.
 
-1. Click on the link to your preconfigured instance. 
+1. Click on the link to your preconfigured instance.
     - You will be asked to sign-in before accessing your instance in the AWS EC2 Console.
 
 1. In the AWS sign-in page, enter the **Account ID** which was emailed to you
@@ -45,7 +45,7 @@ If you have not received that email, please contact an Xilinx event staff member
 
     ![Start](./images/setup_lab/start1.png?raw=true)
 
-    - Allow about 10 seconds for the instance to start and be in the **Running** state. 
+    - Allow about 10 seconds for the instance to start and be in the **Running** state.
     - If needed, click the **Refresh** icon (![Refresh](./images/setup_lab/refresh2.png?raw=true)) in the top-right corner of the EC2 Console to update the instance status information.
 
 1. Once the instance is running, find and note the **IPv4 Public IP** address of your instance.
@@ -64,19 +64,19 @@ The instance you just started is preconfigured with remote desktop protocol (RDP
       - Alternatively you can also simply type `mstsc.exe` in the Windows run prompt.
     - On Linux: RDP clients such a Remmina or Vinagre are suitable.
     - On macOS: use the Microsoft Remote Desktop v8.0.43 (that version offers color depth settings) from the Mac App Store.
-    
+
 1. In the RDP client, enter the **IPv4 Public IP** of your instance.
 
-1. Click **Connect**. This should bring up a message about connection certificates. 
+1. Click **Connect**. This should bring up a message about connection certificates.
 
 1. Click **Yes** to dismiss the message. The Remote Desktop Connection window opens with a login prompt.
 
 1. Login with the following credentials:
     - User: **centos**
     - Password: ******** _(provided at the event)_
-   
+
     ![Remote](./images/setup_lab/remote1.png?raw=true)
-   
+
 1. Click **Ok**.
 
 You should now be connected to the remote F1 instance running Centos 7.
@@ -85,7 +85,7 @@ You should now be connected to the remote F1 instance running Centos 7.
 
 1. In the remote instance, double click on the **Chromium** icon.
     - It opens the browser and loads the lab instructions.
-    
+
     _Note: if a "keyring" popup comes up, click Cancel._
 
 1. Continue following the lab instructions from within the remote instance and the Chromium browser.
@@ -102,12 +102,11 @@ You should now be connected to the remote F1 instance running Centos 7.
     git clone https://github.com/Xilinx/AWS-F1-Developer-Labs.git
     ```
 
-1. Source the SDAccel environment. 
+1. Source the SDAccel environment.
 
     ```bash  
-    cd ~/aws-fpga
+    cd ~/src/project_data/aws-fpga
     source sdaccel_setup.sh
-    source $XILINX_SDX/settings64.sh 
     ```
 
     *Note: the sdaccel_setup.sh script might generate warning messages, but these can be safely ignored.*
